@@ -1,0 +1,129 @@
+.hero {
+  &__wrap {
+    padding-top: 30px;
+  }
+}
+
+.hero-grid {
+  overflow: hidden;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inner-block {
+  height: 100%;
+  padding: 50px;
+  position: relative;
+  background-image: url(../../../img/hero1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &__title {
+    font-size: 24px;
+    line-height: 30px;
+    color: $color-primary;
+  }
+
+  &__link {
+   @include arrow-btn;
+   position: relative;
+   margin-top: 60px;
+  }
+}
+
+.discount {
+  text-align: center;
+  background-image: url(../../../img/hero2.jpg) ;
+
+  &__title {
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: $font-richmond;
+    color: #fff;
+  }
+
+  &__header {
+    font-size: 40px;
+    color: #f4ed23;
+  }
+
+  &__slogan {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  &__link {
+    @include arrow-btn;
+    padding: 12px 25px;
+    background: $color-secondary;
+    color: #fff;
+    border-radius: 30px;
+
+    &:after {
+      display: none;
+    }
+
+    &:hover {
+      background: #fff;
+    }
+  }
+}
+
+
+// responsiveness =============================================================
+
+@media (max-width: 1100px) {
+  .discount {
+    @include padding-zero;
+  }
+}
+
+
+@media (max-width: 992px) {
+
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .block {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .inner-block {
+    padding-top: 30px;
+    padding-left: 30px;
+    width: 100%;
+    height: 220px;
+
+    &__link {
+      margin-top: 30px;
+    }
+  }
+
+  .discount {
+    margin-left: 30px;
+    padding: 0 30px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .discount {
+    @include padding-zero;
+    margin-left: 0;
+  }
+}
+  

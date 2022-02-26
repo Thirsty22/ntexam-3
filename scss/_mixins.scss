@@ -1,0 +1,84 @@
+@mixin list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin anchor {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin tr2 {
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin padding-zero {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin arrow-btn {
+  @include anchor;
+  @include tr2;
+  display: inline-block;
+  position: relative;
+  font-family: $font-mazzard;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+
+  i {
+    transform: translateY(2px);
+    transition: transform 0.2s ease-in-out;
+    color: inherit;
+  }
+
+  &:after {
+    content: '';
+    @include tr2;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 95%;
+    height: 2px;
+    background: #000;
+  }
+
+  &:hover {
+    color: $color-secondary;
+    i {
+      transform: translate(2px, 2px);
+    }
+
+    &:after {
+      background: $color-secondary;
+    }
+  }
+}
+
+
+@mixin animate {
+  @keyframes text-anim {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  animation-name: text-anim;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+

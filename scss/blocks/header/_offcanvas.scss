@@ -1,0 +1,210 @@
+
+.offcanvas {
+  width: 300px !important;
+}
+
+
+.canva-form {
+
+  &__title {
+    font-size: 16px;
+    color: #bac34e;
+  }
+
+  input {
+    border: 1px solid #e2e2e2;
+    
+    &:focus {
+      box-shadow: 1px 1px $color-secondary;
+      border: 1px solid $color-secondary;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+
+  &__check-label {
+    font-size: 12px;
+    color: #414141;
+  }
+
+  &__check {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__password-backup {
+    @include anchor;
+    @include tr2;
+    font-size: 12px;
+    color: $color-dark-gray; 
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &__btn-wrap {
+    width: 100%;
+  }
+
+  &__button {
+    @include tr2;
+    line-height: 35px;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    width: 100%;
+    color: #fff;
+    background: $color-secondary;
+    border: none;
+    border-radius: 24px;
+
+    &:active {
+      background: $color-primary;
+    }
+  }
+
+  &__social {
+    @include anchor;
+    font-size: 16px;
+    color: $color-secondary;
+
+    &:hover {
+      color: $color-secondary
+    }
+  }
+
+  &__links {
+    @include list-unstyled;
+    display: flex;
+    flex-direction: row;
+
+    .canva-form__link {
+      @include tr2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+
+      i {
+        @include tr2;
+        color: #fff;
+      }
+
+      &:nth-child(1) {
+        background: #4c68a2;
+        border: 1px solid #4c68a2;
+
+        &:hover {
+          i {
+            color: #4c68a2;
+          }
+        }
+      }
+      &:nth-child(2) {
+        background: #4285f4;
+        border: 1px solid #4285f4;
+
+        &:hover {
+          i {
+            color: #4285f4;
+          }
+        }
+      }
+      &:nth-child(3) {
+        background: #53d1f8;
+        border: 1px solid #53d1f8;
+
+        &:hover {
+          i {
+            color: #53d1f8;
+          }
+        }
+      }
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+}
+
+
+.canva-btm {
+  
+  &__list {
+    @include list-unstyled;
+
+    a {
+      @include anchor;
+    }
+
+    &:nth-child(2) {
+      border-left: 1px solid #e2e2e2;
+
+      a {
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: $color-gray;
+  }
+
+  &__item-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-gray;
+  }
+
+  &__flag-wrap {
+    display: flex;
+
+    a {
+      padding-right: 3px;
+    }
+
+    &__button--active {
+      border: 1px solid #222;
+    }
+  }
+
+  &__flag-row {
+    position: relative;
+    top: -10px;
+  }
+
+  .canva-btm__wrap {
+    display: flex;
+  }
+
+  button {
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $color-gray;
+    background: none;
+    border: none;
+
+    &:nth-child(2) {
+      color: $color-secondary;
+    }
+  }
+
+}
+

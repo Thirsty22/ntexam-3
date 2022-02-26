@@ -1,0 +1,44 @@
+
+.bg {
+  background: red;
+}
+
+.site-top {
+  margin-bottom: 20px;
+
+  .wrapper {
+    background: transparent;
+  }
+
+  &__p {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}
+
+.nav {
+  &__list {
+    @include list-unstyled;
+    width: 100%;
+  }
+
+  &__item {
+    font-size: 12px;
+    color: $color-dark-gray;
+    text-transform: uppercase;
+
+    a {
+      @include anchor;
+      @include tr2
+    }
+
+    &:hover {
+      a {
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+
+

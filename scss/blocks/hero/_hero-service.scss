@@ -1,0 +1,131 @@
+
+.hero__service {
+  margin-top: 40px
+}
+
+.hero__service-cards {
+  @include list-unstyled;
+}
+
+.service {
+  padding-bottom: 45px;
+  border-bottom: 1px solid $color-mid-gray;
+  position: relative;
+
+  &:after {
+    content: '';
+    @include tr2;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: $color-primary;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+
+  &__inner {
+    padding-left: 20px;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__desc {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: $color-primary;
+  }
+
+  &__slogan {
+    font-size: 12px;
+    font-weight: 400;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .service {
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .service {
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    &:after {
+      display: none;
+    }
+
+    &__inner {
+      width: 320px;
+    }
+  
+    &__desc {
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+
+    &__slogan {
+      br {
+        display: block;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .service__inner {
+    width: 100%;
+  }
+
+  .service__desc {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .service__desc {
+    width: 100%;
+  }
+
+  .service__slogan {
+    br {
+      display: block;
+    }
+  }
+
+  .service__inner {
+    width: 300px;
+  }
+}
+
+
+

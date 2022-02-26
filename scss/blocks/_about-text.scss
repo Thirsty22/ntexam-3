@@ -1,0 +1,81 @@
+
+
+
+.about {
+
+  &__breadcrumb-nav {
+    padding: 130px  0;
+    background-image: url(../../img/about.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .breadcrumb {
+    background: none;
+  }
+
+  .breadcrumb__item {
+    font-size: 14px;
+    color: $color-dark-gray;
+    
+    a {
+      @include anchor;
+      font-size: inherit;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 400;
+    color: $color-primary;
+  } 
+
+  &__text {
+    margin-top: 40px;
+  }
+}
+
+
+.about-inner {
+  padding: 20px;
+  
+  &__title {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: $color-primary;
+  }
+}
+
+.about-block {
+
+  &__title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: $color-primary;
+  }
+
+  &__paragraph {
+    font-size: 14px;
+    color: $color-gray;
+    font-weight: 400;
+    text-align: justify;
+  }
+  
+}
+
+
+@media (max-width: 768px) {
+  .about {
+
+    &__breadcrumb-nav {
+      padding: 57px  0;
+    }
+  }
+
+  .about-block__paragraph {
+    line-height: 1.2;
+  }
+}

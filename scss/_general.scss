@@ -1,0 +1,32 @@
+/* GENERAL */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: $font-mazzard !important;
+  background-image:url(../img/bg-top.jpg), url(../img/bg-bottom.jpg);
+  background-repeat: no-repeat;
+  background-position: center top, center bottom;
+  background-size: 1900px;
+  background-color: #fbf4ea !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+

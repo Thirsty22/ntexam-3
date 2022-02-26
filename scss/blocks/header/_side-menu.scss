@@ -1,0 +1,67 @@
+
+
+.menu-canva {
+  position: relative;
+  width: 300px !important;
+
+  a {
+    @include anchor;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    background: none;
+    border: none;
+    outline: none;
+    
+    span {
+      color: $color-secondary;
+    }
+  }
+  
+  &__body {
+    padding: 0 !important;
+    background: $color-primary;
+  }
+
+  &__list {
+    @include list-unstyled;
+    margin-top: 50px;
+  }
+
+  &__item {
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #fff;
+    border-top: 1px solid #0000003a;
+
+    &:last-child {
+      border-bottom: 1px solid #0000003a;   
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 49px;
+      height: 100%;
+      background: none;
+      border: none;
+      border-left: 1px solid #0000003a;
+
+      i {
+        font-size: 10px;
+        color: #fff;
+      }
+    }
+  }
+}
+
